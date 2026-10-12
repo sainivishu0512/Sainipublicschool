@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --forest: #234B38;
+    --forest-dark: #1A382A;
+    --forest-light: #2D5D46;
+    --forest-subtle: #EDF3EF;
+    --beige: #D7BBA8;
+    --beige-light: #F4EBE3;
+    --beige-dark: #BA9A84;
+    --ivory: #F8F6F0;
+    --ivory-alt: #F0EDE4;
+    --charcoal: #29342D;
+    --charcoal-light: #4A564F;
+    --charcoal-muted: #6B7870;
+    --white: #FFFFFF;
+  }
+
+  body {
+    background-color: #F8F6F0;
+    color: #29342D;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, .font-serif {
+    font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+    letter-spacing: -0.01em;
+  }
+}
+
+/* Custom utility colors */
+.bg-forest { background-color: #234B38; }
+.bg-forest-dark { background-color: #1A382A; }
+.bg-forest-light { background-color: #2D5D46; }
+.bg-forest-subtle { background-color: #EEF4F0; }
+.text-forest { color: #234B38; }
+.text-forest-dark { color: #1A382A; }
+.text-forest-light { color: #2D5D46; }
+.border-forest { border-color: #234B38; }
+
+.bg-beige { background-color: #D7BBA8; }
+.bg-beige-light { background-color: #F5EDE6; }
+.bg-beige-dark { background-color: #BA9A84; }
+.text-beige { color: #D7BBA8; }
+.text-beige-dark { color: #A07F69; }
+.border-beige { border-color: #D7BBA8; }
+
+.bg-ivory { background-color: #F8F6F0; }
+.bg-ivory-alt { background-color: #EFECE3; }
+.border-ivory-dark { border-color: #E4DFC6; }
+
+.text-charcoal { color: #29342D; }
+.text-charcoal-muted { color: #5B6A60; }
+.text-charcoal-light { color: #76857C; }
+
+/* Subtle paper and botanical textures */
+.botanical-pattern {
+  background-image: radial-gradient(#D7BBA8 0.75px, transparent 0.75px);
+  background-size: 24px 24px;
+}
+
+.botanical-leaf-subtle {
+  background-image: radial-gradient(rgba(35, 75, 56, 0.04) 1px, transparent 1px);
+  background-size: 18px 18px;
+}
+
+/* Smooth transitions */
+.transition-smooth {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F8F6F0;
+}
+::-webkit-scrollbar-thumb {
+  background: #D7BBA8;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #234B38;
+}
