@@ -16,78 +16,24 @@ export const CrestLogo: React.FC<CrestLogoProps> = ({
   stacked = false,
 }) => {
   const sizeMap = {
-    sm: { icon: 'w-9 h-9', title: 'text-base', sub: 'text-[9px]' },
-    md: { icon: 'w-12 h-12', title: 'text-xl', sub: 'text-[11px]' },
-    lg: { icon: 'w-16 h-16', title: 'text-2xl', sub: 'text-xs' },
-    xl: { icon: 'w-20 h-20', title: 'text-3xl', sub: 'text-sm' },
+    sm: { icon: 'w-10 h-10', title: 'text-sm sm:text-base', sub: 'text-[9px]' },
+    md: { icon: 'w-12 h-12 sm:w-14 sm:h-14', title: 'text-lg sm:text-xl', sub: 'text-[10px] sm:text-[11px]' },
+    lg: { icon: 'w-20 h-20', title: 'text-2xl', sub: 'text-xs' },
+    xl: { icon: 'w-28 h-28', title: 'text-3xl', sub: 'text-sm' },
   };
 
   const isLight = variant === 'light';
   const isBeige = variant === 'beige';
 
-  const iconBg = isLight ? '#FFFFFF' : isBeige ? '#234B38' : '#234B38';
-  const strokeColor = isLight ? '#234B38' : '#D7BBA8';
-  const leafColor = isLight ? '#234B38' : '#D7BBA8';
-
   return (
     <div className={`flex items-center gap-3.5 ${stacked ? 'flex-col text-center' : ''} ${className}`}>
-      {/* Botanical Crest SVG */}
-      <div className={`relative shrink-0 ${sizeMap[size].icon} transition-transform duration-300 hover:scale-105`}>
-        <svg
-          viewBox="0 0 100 100"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          className="w-full h-full drop-shadow-sm"
-        >
-          {/* Outer circle */}
-          <circle cx="50" cy="50" r="48" fill={iconBg} stroke={strokeColor} strokeWidth="2.5" />
-          
-          {/* Inner ring */}
-          <circle cx="50" cy="50" r="42" fill="none" stroke={strokeColor} strokeWidth="1" strokeDasharray="3 2" />
-          
-          {/* Botanical Blossom / Flower of Individuality */}
-          {/* Central Petal */}
-          <path
-            d="M50 22 C50 22 58 35 58 46 C58 52 54 57 50 58 C46 57 42 52 42 46 C42 35 50 22 50 22 Z"
-            fill={leafColor}
-            opacity="0.9"
-          />
-          {/* Left Petal */}
-          <path
-            d="M48 56 C39 52 28 42 33 32 C38 23 48 37 49 46 Z"
-            fill={leafColor}
-            opacity="0.75"
-          />
-          {/* Right Petal */}
-          <path
-            d="M52 56 C61 52 72 42 67 32 C62 23 52 37 51 46 Z"
-            fill={leafColor}
-            opacity="0.75"
-          />
-          
-          {/* Open Book of Knowledge underneath flower */}
-          <path
-            d="M50 58 Q40 54 28 56 L28 69 Q40 67 50 71 Q60 67 72 69 L72 56 Q60 54 50 58 Z"
-            fill={strokeColor}
-          />
-          <path
-            d="M50 58 L50 71"
-            stroke={isLight ? '#FFFFFF' : '#234B38'}
-            strokeWidth="1.5"
-          />
-          
-          {/* Ribbon / Scroll Base */}
-          <path
-            d="M33 76 L50 73 L67 76 L62 82 L50 79 L38 82 Z"
-            fill={leafColor}
-            opacity="0.8"
-          />
-          
-          {/* Stars */}
-          <circle cx="28" cy="48" r="1.5" fill={leafColor} />
-          <circle cx="72" cy="48" r="1.5" fill={leafColor} />
-        </svg>
-      </div>
+      {/* Official Saini Public School Crest */}
+      <img
+        src="/images/logo-transparent.png"
+        alt="Saini Public School Crest"
+        className={`${sizeMap[size].icon} object-contain shrink-0 transition-transform duration-300 hover:scale-105 drop-shadow-sm`}
+        loading="eager"
+      />
 
       {showText && (
         <div className="leading-tight">
@@ -103,7 +49,7 @@ export const CrestLogo: React.FC<CrestLogoProps> = ({
               isLight ? 'text-[#D7BBA8]' : isBeige ? 'text-[#F8F6F0]/80' : 'text-[#56645B]'
             }`}
           >
-            Foundation through Class 8
+            Foundation through Class 8 • Sonepat
           </span>
         </div>
       )}
