@@ -15,7 +15,6 @@ import { EnquiryModal } from './components/EnquiryModal';
 import { ProspectusModal } from './components/ProspectusModal';
 import { NoticeModal } from './components/NoticeModal';
 import { LightboxModal } from './components/LightboxModal';
-import { FloatingActions } from './components/FloatingActions';
 
 import type { Notice, GalleryItem } from './data/schoolData';
 
@@ -136,12 +135,6 @@ export function App() {
       <LightboxModal
         item={selectedGalleryImage}
         onClose={() => setSelectedGalleryImage(null)}
-      />
-
-      {/* Floating Action Pill */}
-      <FloatingActions
-        onOpenEnquiry={() => setEnquiryModalOpen(true)}
-        onOpenProspectus={() => setProspectusModalOpen(true)}
       />
     </div>
   );
