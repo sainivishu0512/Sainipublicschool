@@ -3,14 +3,12 @@ import {
   GraduationCap,
   Send,
   CheckCircle2,
-  Clock,
   AlertCircle,
 } from 'lucide-react';
 
 import {
   CLASS_OPTIONS,
   ADMISSION_STEPS,
-  ELIGIBILITY_GUIDE,
   OFFICIAL_TAGLINE,
 } from '../data/schoolData';
 
@@ -139,11 +137,8 @@ export const AdmissionsSection: React.FC<AdmissionsSectionProps> = () => {
           </div>
         </div>
 
-        {/* Two-Column Grid: Left Column = Form, Right Column = Eligibility & Documents */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
-          
-          {/* Left Column: Official Admissions Enquiry Form */}
-          <div className="lg:col-span-7 bg-[#FFFFFF] rounded-2xl p-6 sm:p-8 border-2 border-[#D7BBA8]/60 shadow-lg">
+        {/* Admissions Enquiry Form */}
+        <div className="max-w-3xl mx-auto bg-[#FFFFFF] rounded-2xl p-6 sm:p-10 border-2 border-[#D7BBA8]/60 shadow-lg">
             <div className="border-b border-[#D7BBA8]/40 pb-4 mb-6">
               <span className="text-xs uppercase tracking-widest text-[#A07F69] font-semibold">
                 Direct School Admissions Desk
@@ -379,37 +374,6 @@ export const AdmissionsSection: React.FC<AdmissionsSectionProps> = () => {
                 </p>
               </form>
             )}
-          </div>
-
-          {/* Right Column: Age Criteria & Verified Document Requirements */}
-          <div className="lg:col-span-5 space-y-6">
-            
-            {/* Age Guidelines Chart */}
-            <div className="bg-[#FFFFFF] p-6 rounded-2xl border border-[#D7BBA8]/50 shadow-sm space-y-4">
-              <div className="flex items-center gap-2.5">
-                <Clock className="w-5 h-5 text-[#234B38]" />
-                <h4 className="text-lg font-serif font-bold text-[#234B38]">
-                  Age Eligibility Guidelines
-                </h4>
-              </div>
-              <p className="text-xs text-[#56645B]">
-                As per standard foundational norms (calculated as of 31st March of the admission year):
-              </p>
-              
-              <div className="divide-y divide-[#D7BBA8]/30 text-xs">
-                {ELIGIBILITY_GUIDE.map((item, idx) => (
-                  <div key={idx} className="py-2 flex justify-between items-center">
-                    <span className="font-semibold text-[#29342D]">{item.grade}</span>
-                    <span className="text-[#A07F69] bg-[#F8F6F0] px-2 py-0.5 rounded border border-[#D7BBA8]/30">
-                      {item.minAge}
-                    </span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-          </div>
-
         </div>
 
       </div>
