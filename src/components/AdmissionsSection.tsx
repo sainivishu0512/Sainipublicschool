@@ -3,10 +3,7 @@ import {
   GraduationCap,
   Send,
   CheckCircle2,
-  FileText,
   Clock,
-  Check,
-  Download,
   AlertCircle,
 } from 'lucide-react';
 
@@ -18,10 +15,10 @@ import {
 } from '../data/schoolData';
 
 interface AdmissionsSectionProps {
-  onOpenProspectus: () => void;
+  onOpenProspectus?: () => void;
 }
 
-export const AdmissionsSection: React.FC<AdmissionsSectionProps> = ({ onOpenProspectus }) => {
+export const AdmissionsSection: React.FC<AdmissionsSectionProps> = () => {
   const [formData, setFormData] = useState({
     studentName: '',
     parentName: '',
@@ -408,48 +405,6 @@ export const AdmissionsSection: React.FC<AdmissionsSectionProps> = ({ onOpenPros
                     </span>
                   </div>
                 ))}
-              </div>
-            </div>
-
-            {/* Required Documents Checklist */}
-            <div className="bg-[#FFFFFF] p-6 rounded-2xl border border-[#D7BBA8]/50 shadow-sm space-y-4">
-              <div className="flex items-center gap-2.5">
-                <FileText className="w-5 h-5 text-[#234B38]" />
-                <h4 className="text-lg font-serif font-bold text-[#234B38]">
-                  Documents Required at Registration
-                </h4>
-              </div>
-              <ul className="space-y-2 text-xs text-[#29342D]">
-                <li className="flex items-start gap-2">
-                  <Check className="w-4 h-4 text-[#234B38] shrink-0 mt-0.5" />
-                  <span>Attested copy of Child's Official Birth Certificate</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <Check className="w-4 h-4 text-[#234B38] shrink-0 mt-0.5" />
-                  <span>Recent passport-size photographs of Student and Parents (4 each)</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <Check className="w-4 h-4 text-[#234B38] shrink-0 mt-0.5" />
-                  <span>Original Transfer Certificate (TC) & Previous Report Card (for Classes 1 to 8)</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <Check className="w-4 h-4 text-[#234B38] shrink-0 mt-0.5" />
-                  <span>Address & Identity Proof of Parent/Guardian (Aadhaar / Voter ID / Passport)</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <Check className="w-4 h-4 text-[#234B38] shrink-0 mt-0.5" />
-                  <span>Basic Medical Fitness & Blood Group Record</span>
-                </li>
-              </ul>
-
-              <div className="pt-2">
-                <button
-                  onClick={onOpenProspectus}
-                  className="w-full flex items-center justify-center gap-2 py-2.5 px-4 bg-[#F8F6F0] hover:bg-[#D7BBA8]/20 text-[#234B38] border border-[#234B38]/30 rounded-lg text-xs font-semibold transition-colors cursor-pointer"
-                >
-                  <Download className="w-4 h-4 text-[#234B38]" />
-                  <span>Download School Prospectus & Admission Guide</span>
-                </button>
               </div>
             </div>
 
